@@ -1,0 +1,47 @@
+[200~// Define an interface called Animal
+interface Animal {
+    // Abstract methods (no body)
+    void sound();
+    void eat();
+}
+
+// Implementing the Animal interface in a Dog class
+class Dog implements Animal {
+    @Override
+    public void sound() {
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(The dog is eating.);
+    }
+}
+
+// Implementing the Animal interface in a Cat class
+class Cat implements Animal {
+    @Override
+    public void sound() {
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(The cat is eating.);
+    }
+}
+
+// Main class to test the interface implementation
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of Dog and Cat
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+        
+        // Call methods using interface reference
+        myDog.sound();  // Outputs: Woof! Woof!
+        myDog.eat();    // Outputs: The dog is eating.
+        
+        myCat.sound();  // Outputs: Meow! Meow!
+        myCat.eat();    // Outputs: The cat is eating.
+    }
+}
+
